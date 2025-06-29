@@ -11,6 +11,8 @@ import Estudios from "../components/Estudios.astro";
 import Book from "../components/icons/Book.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Proyectos from "../components/Proyectos.astro";
+import CVIcon from "../components/icons/CV.astro";
+import CV from ".public/CV-Nicolas-Marcelo.pdf";
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -22,7 +24,7 @@ import Proyectos from "../components/Proyectos.astro";
 	description="Contrata a Nicolas para crear tu aplicación web o móvil. Estudiante desarrollador de software"
 >
 	<main>
-		<SectionContainer class="py-44 pb-32">
+		<SectionContainer class="py-44 pb-24">
 			<img
 				class="rounded-full size-12"
 				src="https://avatars.githubusercontent.com/u/181670171?v=4"
@@ -46,20 +48,24 @@ import Proyectos from "../components/Proyectos.astro";
 				<span class="text-red-200/90"> De Lima, Perú.</span>
 				<span class="text-gray-200 opacity-75"> Creador de aplicaciones</span>
 			</h2>
-			<nav class="flex gap-x-4 mt-8 flex-wrap">
+				<nav class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 justify-items-center">
 				<SocialPill href="https://www.linkedin.com/in/n-marcelo">
-					<LinkedInIcon class="text-gray-100 size-4 lg:size-6 "/>
-					<p class="text-gray-200">LinkedIn</p>
+					<LinkedInIcon class="text-gray-100 size-4 sm:size-5 lg:size-6" />
+					<p class="text-gray-200 text-sm sm:text-base">LinkedIn</p>
 				</SocialPill>
 				<SocialPill href="https://github.com/N-Marcelo">
-					<GitHubIcon class="text-gray-100 size-4 lg:size-6" />
-					<p class="text-gray-200">GitHub</p>
+					<GitHubIcon class="text-gray-100 size-4 sm:size-5 lg:size-6" />
+					<p class="text-gray-200 text-sm sm:text-base">GitHub</p>
 				</SocialPill>
-				<SocialPill href="https://github.com/N-Marcelo">
-					<MailIcon class="text-gray-100 size-4 lg:size-6" />
-					<p class="text-gray-200">Nicolasmarceloodar@gmail.com</p>
+				<SocialPill>
+					<MailIcon class="text-gray-100 size-4 sm:size-5 lg:size-6" />
+					<p class="text-gray-200 text-sm sm:text-base break-words text-center">Nicolasmarceloodar@gmail.com</p>
 				</SocialPill>
-			</nav>
+				<SocialPill href="./public/Files/CV_PABLO_MARCELO.pdf" download>
+					<CVIcon class="text-gray-100 size-4 sm:size-5 lg:size-6" />
+					<p class="text-gray-200 text-sm sm:text-base text-center">Descargar CV</p>
+				</SocialPill>
+				</nav>
 		</s>
 		</SectionContainer>
 
