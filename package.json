@@ -11,7 +11,10 @@
   "dependencies": {
     "@fontsource-variable/onest": "^5.2.9",
     "@fontsource/twinkle-star": "^5.2.6",
-    "astro": "^5.10.1"
+    "astro": "^5.10.1",
+    "keen-slider": "^6.8.6",
+    "photoswipe": "^5.4.4",
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
