@@ -1,0 +1,34 @@
+---
+import EstudiosItem from "./EstudiosItem.astro"
+
+const ESTUDIOS = [
+    {
+        date: 'Actualmente...',
+        title: 'Estudiante de Sistemas de Información - ISIL',
+        description:
+            'Actualmente me encuentro en el último ciclo de mi carerra técnica, mi lugar de mérito es quinto superior.',
+    },
+    {
+        date: 'Diciembre 2024',
+        title: 'Certificado en despliegue y mejora continua de sistemas - ISIL',
+        description:
+            'Se desarrolla la capacidad de desplegar y mejorar continuamente sistemas de información, aplicando buenas prácticas de desarrollo y herramientas de integración continua.',
+    },
+    {
+        date: 'Diciembre 2023',
+        title: 'Certificado en desarrollo web y soporte de sistemas - ISIL',
+        description:
+            'Se desarrolla la capacidad de diseñar, desarrollar y mantener aplicaciones web, así como brindar soporte técnico a sistemas de información.  ',
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-2">
+    {
+        ESTUDIOS.map(experience => (
+            <li class="mb-10 ms-4">
+                <EstudiosItem {...experience} />
+            </li>
+        ))
+    }
+    
+</ol>

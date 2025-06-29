@@ -1,0 +1,80 @@
+---
+import JavaIcon from './icons/JavaIcon.astro';
+import HtmlIcon from './icons/HtmlIcon.astro';
+import BootstrapIcon from './icons/BootstrapIcon.astro';
+import JavaScriptIcon from './icons/JavaScriptIcon.astro';
+import CSharpIcon from './icons/CSharpIcon.astro';
+
+const TAGS = {
+    Java: {
+        name: "Java",
+        class: "bg-black text-white",
+        icon: JavaIcon,
+    },
+    Html: {
+        name: "Html",
+        class: "bg-black text-white",
+        icon: HtmlIcon,
+    },
+    Bootstrap: {
+        name: "Bootstrap",
+        class: "bg-black text-white",
+        icon: BootstrapIcon,
+    },
+    JavaScript: {
+        name: "JavaScript",
+        class: "bg-black text-white",
+        icon: JavaScriptIcon,
+    },
+    Csharp: {
+        name: "Csharp",
+        class: "bg-black text-white",
+        icon: CSharpIcon,
+    },
+}
+
+const PROYECTOS = [
+    {
+        title: "Control de Hábitos",
+        description:
+            "Proyecto realizado con Spring Boot, interfaz dinámica con Thymeleaf, Bootstrap y JavaScript. Permite registrar hábitos y llevar un control de ellos junto con un historial de aquellos que cumples. Además cuenta con un sistema de autenticación de correos al registrarse con Spring Email",
+        link: "#",
+        github: "https://github.com/N-Marcelo/ControlHabitos.git",
+        image: "/Proyectos/ControlHabitos1.webp",
+        tags: [TAGS.Java, TAGS.Html, TAGS.Bootstrap, TAGS.JavaScript],
+    },
+    {
+        title: "Gestor de Tareas",
+        description:
+            "Proyecto realizado con C# y ASP.NET Core, consume una API, se usó Bootstrap y JavaScript para carga dinámica, se pueden registrar Tareas según el la categoria que se tengan, tanto tareas como categorias se pueden gestionar al gusto del usuario, contiene validaciones trabajando con la API. Una Web-App dirigida a estudiantes.",
+        link: "#",
+        github: "https://github.com/N-Marcelo/WebAppTareas.git",
+        image: "/Proyectos/GestorTareas1.webp",
+        tags: [TAGS.Csharp,TAGS.Html, TAGS.Bootstrap, TAGS.JavaScript],
+    },
+]
+---
+
+{
+    PROYECTOS.map(({ image, title, description, tags }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-3">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+            {tags.map((tag) => (
+                <li>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                    <tag.icon class="size-4"/>
+                    {tag.name}
+                </span>
+                </li>
+            ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10 mb-4"
+                src={image}
+                alt={`Captura de pantalla del proyecto ${image}`}
+            />
+        </article>
+    ))
+}
